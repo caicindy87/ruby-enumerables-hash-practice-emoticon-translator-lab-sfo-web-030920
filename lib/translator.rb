@@ -37,7 +37,7 @@ def get_japanese_emoticon(file_path, emoticon)
     if emoticon != key
       "Sorry, that emoticon was not found"
     else
-      return new_hash["get_emoticon"][key]
+      new_hash["get_emoticon"][key]
     end
   end
 end
