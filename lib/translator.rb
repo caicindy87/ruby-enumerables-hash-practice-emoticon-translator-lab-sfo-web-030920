@@ -25,7 +25,7 @@ def get_japanese_emoticon(file_path, emoticon)
         if eng != emoticon
           return "Sorry, that emoticon was not found"
         else
-         return load_library(file_path)['get_emoticon'][emoticon]
+         load_library(file_path)['get_emoticon'][emoticon]
         end
     end
      #binding.pry
