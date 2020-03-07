@@ -31,15 +31,15 @@ end
 #     #binding.pry
 # end
 
-def get_japanese_emoticon(file_path, jap_emo)
-  result = load_library(file_path)
-  # result['get_emoticon'] do |emo, trans|
-  #   trans do |usa, jap|
-       binding.pry
-  #     jap_emo = usa[jap]
-  #   end
-  # end
-  # jap_emo
+def get_japanese_emoticon(file_path, emoticon)
+  new_hash = load_library(file_path)
+  new_hash["get_emoticon"].each do |key, value|
+    if emoticon != key
+      return "Sorry, that emoticon was not found"
+    else
+      return new_hash["get_emoticon"][key]
+    end
+  end
 end
 
 def get_english_meaning
