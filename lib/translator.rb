@@ -18,29 +18,29 @@ def load_library(file_path)
   new_hash
 end
 
-def get_japanese_emoticon(file_path, emoticon)
-    emoticons_hash = YAML.load_file(file_path)
-    emoticons_hash.each do |meaning, emoticons_array|
-      eng, jap = emoticons_array 
-        if eng == emoticon
-          return load_library(file_path)['get_emoticon'][emoticon]
-        else
-          "Sorry, that emoticon was not found"
-        end
-    end
-     #binding.pry
-end
-
-# def get_japanese_emoticon(file_path, jap_emo)
-#   result = load_library(file_path)
-#   result['get_emoticon'] do |emo, trans|
-#     trans do |usa, jap|
-#       binding.pry
-#       jap_emo = usa[jap]
+# def get_japanese_emoticon(file_path, emoticon)
+#     emoticons_hash = YAML.load_file(file_path)
+#     emoticons_hash.each do |meaning, emoticons_array|
+#       eng, jap = emoticons_array 
+#         if eng == emoticon
+#           return load_library(file_path)['get_emoticon'][emoticon]
+#         else
+#           "Sorry, that emoticon was not found"
+#         end
 #     end
-#   end
-#   jap_emo
+#     #binding.pry
 # end
+
+def get_japanese_emoticon(file_path, jap_emo)
+  result = load_library(file_path)
+  result['get_emoticon'] do |emo, trans|
+    trans do |usa, jap|
+      binding.pry
+      jap_emo = usa[jap]
+    end
+  end
+  jap_emo
+end
 
 def get_english_meaning
   # code goes here
