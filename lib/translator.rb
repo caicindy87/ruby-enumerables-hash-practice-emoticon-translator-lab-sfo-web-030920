@@ -23,7 +23,7 @@ def get_japanese_emoticon(file_path, emoticon)
     emoticons_hash.each do |meaning, emoticons_array|
       eng, jap = emoticons_array 
         if eng == emoticon
-          return load_library(file_path)['get_emoticon'][emoticon]
+          p load_library(file_path)['get_emoticon'][emoticon]
         end
         if eng != emoticon
           p "Sorry, that emoticon was not found"
