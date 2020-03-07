@@ -35,9 +35,9 @@ def get_japanese_emoticon(file_path, emoticon)
   new_hash = load_library(file_path)
   new_hash["get_emoticon"].each do |key, value|
     if emoticon != key
-      "Sorry, that emoticon was not found"
+      return "Sorry, that emoticon was not found"
     else
-      new_hash["get_emoticon"][key]
+      return new_hash["get_emoticon"][key]
     end
   end
 end
