@@ -22,10 +22,10 @@ def get_japanese_emoticon(file_path, emoticon)
     emoticons_hash = YAML.load_file(file_path)
     emoticons_hash.each do |meaning, emoticons_array|
       eng, jap = emoticons_array 
-        if eng != emoticon
-          return "Sorry, that emoticon was not found"
+        if eng == emoticon
+          return load_library(file_path)['get_emoticon'][emoticon]
         else
-         load_library(file_path)['get_emoticon'][emoticon]
+         "Sorry, that emoticon was not found"
         end
     end
      #binding.pry
