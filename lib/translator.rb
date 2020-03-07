@@ -34,4 +34,5 @@ def get_english_meaning(file_path, emoticon)
     new_hash["get_meaning"][emoticon]
   else
     "Sorry, that emoticon was not found"
+  end
 end
