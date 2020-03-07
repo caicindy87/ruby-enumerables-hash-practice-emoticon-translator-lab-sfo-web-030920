@@ -31,6 +31,17 @@ def get_japanese_emoticon(file_path, emoticon)
      #binding.pry
 end
 
+# def get_japanese_emoticon(file_path, jap_emo)
+#   result = load_library(file_path)
+#   result['get_emoticon'] do |emo, trans|
+#     trans do |usa, jap|
+#       binding.pry
+#       jap_emo = usa[jap]
+#     end
+#   end
+#   jap_emo
+# end
+
 def get_english_meaning
   # code goes here
 end
